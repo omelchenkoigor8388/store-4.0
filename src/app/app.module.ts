@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
@@ -83,14 +83,15 @@ import { NzPipesModule } from 'ng-zorro-antd/pipes';
 import { AdminComponent } from './pages/admin/admin.component';
 
 import { RouterModule } from '@angular/router';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AdminComponent
+    AdminComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
