@@ -1,1 +1,33 @@
-<p>add-product works!</p>
+<form (ngSubmit)="submitForm()" #myForm="ngForm">
+    <nz-form-item>
+        <nz-form-label [nzRequired]="true">Title:</nz-form-label>
+        <nz-form-control>
+            <input nz-input type="text" id="title" name="title" [(ngModel)]="formData.title" required>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzRequired]="true">Description:</nz-form-label>
+        <nz-form-control>
+            <textarea nz-input id="description" name="description" [(ngModel)]="formData.description"
+                required></textarea>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzRequired]="true">Price:</nz-form-label>
+        <nz-form-control>
+            <input nz-input type="number" id="price" name="price" [(ngModel)]="formData.price" required>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzRequired]="true">Image:</nz-form-label>
+        <nz-form-control>
+            <input type="file" id="image" name="image" (change)="onFileChange($event)" accept="image/*" required>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <button nz-button nzType="primary" type="submit"
+                [disabled]="!myForm.form.valid || !imageSelected">Submit</button>
+        </nz-form-control>
+    </nz-form-item>
+</form>

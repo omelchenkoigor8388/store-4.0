@@ -85,6 +85,9 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { RouterModule } from '@angular/router';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 
+
+import { ToastrModule } from 'ngx-toastr';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -167,7 +170,8 @@ registerLocaleData(en);
     NzWaveModule,
     NzResizableModule,
     NzPipesModule,
-    RouterModule
+    RouterModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
