@@ -12,6 +12,7 @@ import { NgForm } from '@angular/forms';
 export class AddProductComponent {
   formData = {
     title: '',
+    categories: '',
     description: '',
     price: '',
     image: null
@@ -29,6 +30,7 @@ export class AddProductComponent {
     formData.append('title', this.formData.title);
     formData.append('description', this.formData.description);
     formData.append('price', this.formData.price);
+    formData.append('categoris', this.formData.categories);
 
     if (this.formData.image) {
       formData.append('image', this.formData.image);

@@ -5,6 +5,12 @@
             <input nz-input type="text" id="title" name="title" [(ngModel)]="formData.title" required>
         </nz-form-control>
     </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzRequired]="true">Categoris:</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="text" id="categoris" name="categoris" [(ngModel)]="formData.categories" required>
+    </nz-form-control>
+  </nz-form-item>
     <nz-form-item>
         <nz-form-label [nzRequired]="true">Description:</nz-form-label>
         <nz-form-control>
